@@ -6,13 +6,15 @@
   ([x] "only one :) ")
 )
 
-(defn test
+(comment (defn mul-arity
+  "   Can't have fixed arity function with more params than variadic
+   function"
   ([first] (print "one" first))
-  ([first & rest] (println "Testing.. " rest)))
+  ([first & rest] (println "Testing.. " rest))
+  ([first sec third] (println first sec third))))
 
 (add)
 (add 1)
 (add 1 2) 
 
-
-(test 1)
+;;; ambigous (mul-arity 1 2 3)
